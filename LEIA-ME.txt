@@ -1,0 +1,24 @@
+SITE + AMPLOPAY — VERSÃO FINAL
+
+Já configurado:
+- credencial AmploPay no servidor (não aparece no HTML);
+- geração de PIX via POST /gateway/pix/receive;
+- QR Code via pix.image;
+- PIX Copia e Cola via pix.code;
+- transactionId;
+- callbackUrl automático baseado no domínio onde o site estiver hospedado;
+- validação do webhook usando o webhookToken retornado pela própria AmploPay;
+- confirmação automática para o evento TRANSACTION_PAID;
+- consulta do status a cada 3 segundos no modal;
+- tela de confirmação quando o pagamento for reconhecido.
+
+Para instalar:
+1. Envie TODO o conteúdo desta pasta para o servidor.
+2. O servidor precisa ter PHP e cURL habilitados.
+3. Use HTTPS no domínio.
+4. Teste primeiro com uma cobrança pequena.
+
+Segurança:
+- config.php e common.php ficam bloqueados pelo .htaccess.
+- a chave privada nunca é enviada ao navegador.
+- storage/ também fica bloqueado por .htaccess.
