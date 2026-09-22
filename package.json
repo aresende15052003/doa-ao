@@ -1,0 +1,8 @@
+{
+  "name": "pagina-pix-amplopay-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}
